@@ -1,0 +1,5 @@
+A_and_B = input()
+remove_space = A_and_B.split(" ")
+change_to_num = list(map(int, remove_space))
+final_result = sum(change_to_num)
+print(final_result)
