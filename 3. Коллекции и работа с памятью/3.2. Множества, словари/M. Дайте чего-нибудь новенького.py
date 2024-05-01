@@ -12,5 +12,8 @@ for j in range(M):
         coocked_dishes.add(element)
 uncooked_dishes = dishes - coocked_dishes
 uncooked_dishes_list = list(uncooked_dishes)
-final_list = sorted(uncooked_dishes_list)
-print(final_list)
+if len(uncooked_dishes) == 0:
+    print("Готовить нечего")
+else:
+    final_list = sorted(uncooked_dishes_list)
+    print("\n".join(final_list))
