@@ -17,4 +17,4 @@ def make_linear(args):
             final_list.extend(make_linear(arg))
         else:
             final_list.append(arg)
-        return final_list
+    return final_list

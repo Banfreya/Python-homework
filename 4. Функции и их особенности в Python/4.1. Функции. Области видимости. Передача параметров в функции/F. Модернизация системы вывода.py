@@ -4,8 +4,7 @@
 # Примечание
 # В решении не должно быть вызовов требуемых функций
 
-def modern_print(string, string_set=set()):
-    if string not in string_set:
-        string_set.add(string)
+def modern_print(string, _printed=set()):
+    if string not in _printed:
+        _printed.add(string)
         print(string)
-
