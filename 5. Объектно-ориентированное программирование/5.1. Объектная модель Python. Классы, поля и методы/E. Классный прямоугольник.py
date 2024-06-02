@@ -34,24 +34,5 @@ class Rectangle:
         first_side, second_side = self.get_size()
         return round(first_side * 2 + second_side * 2, 2)
 
-    def area(self):
-        first_side, second_side = self.get_size()
-        return round(first_side * second_side, 2)
 
-    def get_pos(self):
-        return self.up_left_x, self.up_left_y
-
-    def move(self, dx, dy):
-        self.up_left_x = round(self.up_left_x + dx, 2)
-        self.up_left_y = round(self.up_left_y + dy, 2)
-        self.bottom_right_x = round(self.bottom_right_x + dx, 2)
-        self.bottom_right_y = round(self.bottom_right_y + dy, 2)
-
-    def resize(self, width, height):
-        self.bottom_right_x = round(self.up_left_x + width, 2)
-        self.bottom_right_y = round(self.up_left_y - height, 2)
-        if self.up_left_x > self.bottom_right_x:
-            self.up_left_x, self.bottom_right_x = self.bottom_right_x, self.up_left_x
-        if self.up_left_y < self.bottom_right_y:
-            self.up_left_y, self.bottom_right_y = self.bottom_right_y, self.up_left_y
 
