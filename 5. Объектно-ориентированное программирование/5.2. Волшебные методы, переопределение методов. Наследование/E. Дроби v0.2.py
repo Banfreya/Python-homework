@@ -9,7 +9,7 @@ class Fraction:
         self._y = y
         self._reduce()
 
-    def numerator_sign(self):
+    def _grebanyi_numerator_sign(self):
         return -1 if self._x < 0 else 1
 
     def _reduce(self):
@@ -42,3 +42,4 @@ class Fraction:
 
     def __repr__(self):
         return f"Fraction('{self.__str__()}')"
+
